@@ -1,0 +1,30 @@
+.newsColum {
+    background-color: rgb(240, 240, 240);
+    margin: 2%;
+    flex-wrap: wrap
+    
+}
+
+.newstittle {
+    text-align: center;
+    text-size-adjust: 10;
+}
+
+.imagenNew{
+    width: 100%;
+    transition: all 0.5s ease;
+    padding: 0 0 5% 0; 
+
+}
+
+.imagenNew:hover{
+	transform: scale(0.95);
+	border-radius: 10px;
+	
+}
+
+.container-fluid1{
+    background-color: rgb(240, 240, 240);
+    
+
+}
