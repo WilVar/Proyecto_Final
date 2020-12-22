@@ -49,11 +49,11 @@ export default {
           console.log("login");
           
           User.login(form).then( (response) => {
-              let token = response.data.tokenReturn.toString();
+              localStorage.setItem("token", response.data.tokenReturn);
               localStorage.setItem("auth", response.data.auth);
               localStorage.setItem("user", JSON.stringify(response.data.user));
               
-              console.log("response", token);
+              this.$router.push("/");
           }).catch( (error) => {
               console.log("error", error);
           });

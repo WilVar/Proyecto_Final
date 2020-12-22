@@ -57,6 +57,9 @@ export default {
   },
   created () {
     this.auth = localStorage.getItem("auth");
+  },
+  updated () {
+    this.auth = localStorage.getItem("auth");
   }
 }
 </script>
