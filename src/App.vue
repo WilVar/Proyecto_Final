@@ -33,7 +33,7 @@
         </div>
         <div v-else>
           <li class="nav-item">
-            <a class="nav-link">LogOut</a>
+            <a class="nav-link" href="#" v-on:click="logOut">LogOut</a>
           </li>
         </div>
       </ul>
@@ -60,6 +60,15 @@ export default {
   },
   updated () {
     this.auth = localStorage.getItem("auth");
+  },
+  methods:{
+    logOut () {
+      localStorage.removeItem("auth");
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+
+      this.$forceUpdate();
+    }
   }
 }
 </script>
