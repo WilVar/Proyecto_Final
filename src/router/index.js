@@ -5,6 +5,7 @@ import Servicios from '../components/Servicios.vue';
 import Noticias from '../components/Noticias.vue';
 import Equipo from '../components/Equipo.vue';
 import Login from '../components/Login.vue';
+import Register from '../components/Register.vue';
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ]
 })

@@ -26,8 +26,15 @@
         </li>
         <div v-if="this.auth == null">
           <li class="nav-item">
-            <router-link tag="li" to="/login" >
+            <router-link tag="li" to="/login">
               <a class="nav-link">Login</a>
+            </router-link>
+          </li>
+        </div>
+        <div v-if="this.auth == null">
+          <li class="nav-item">
+            <router-link tag="li" to="/register">
+              <a class="nav-link">Register</a>
             </router-link>
           </li>
         </div>
@@ -38,38 +45,38 @@
         </div>
       </ul>
     </nav>
-    <router-view/>
-    <Footer/>
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from './components/Footer.vue'
+import Footer from "./components/Footer.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Footer: Footer,
   },
-  data () {
+  data() {
     return {
-      auth: null
-    }
+      auth: null,
+    };
   },
-  created () {
+  created() {
     this.auth = localStorage.getItem("auth");
   },
-  updated () {
+  updated() {
     this.auth = localStorage.getItem("auth");
   },
-  methods:{
-    logOut () {
+  methods: {
+    logOut() {
       localStorage.removeItem("auth");
       localStorage.removeItem("user");
       localStorage.removeItem("token");
 
       this.$forceUpdate();
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
