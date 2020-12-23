@@ -13,4 +13,8 @@ export default {
     return Api().post("/usuario/logout");
   },
 
+  list() {
+    return Api().get("/usuario/list");
+  },
+
 };

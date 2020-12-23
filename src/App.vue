@@ -24,6 +24,13 @@
             <a class="nav-link">Equipo</a>
           </router-link>
         </li>
+        <div v-if="this.isAdmin">
+          <li class="nav-item">
+            <router-link tag="li" to="/usuarios">
+              <a class="nav-link">Usuarios</a>
+            </router-link>
+          </li>
+        </div>
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/login">
@@ -60,21 +67,38 @@ export default {
   data() {
     return {
       auth: null,
+      user: null,
+      isAdmin: false
     };
   },
   created() {
-    this.auth = localStorage.getItem("auth");
+    this.loadProps();
   },
   updated() {
-    this.auth = localStorage.getItem("auth");
+    this.loadProps();
   },
   methods: {
     logOut() {
       localStorage.removeItem("auth");
       localStorage.removeItem("user");
       localStorage.removeItem("token");
-
+       this.$router.push("/");
       this.$forceUpdate();
+    },
+    loadProps() {
+      this.auth = localStorage.getItem("auth");
+      this.user = localStorage.getItem("user");
+      if (this.user) {
+        this.user = JSON.parse(this.user);
+        console.log("this.user",this.user.rol)
+        if(this.user.rol == "Administrador"){
+          this.isAdmin = true;
+        }else{
+          this.isAdmin = false;
+        }
+      }else{
+        this.isAdmin = false
+      }
     },
   },
 };

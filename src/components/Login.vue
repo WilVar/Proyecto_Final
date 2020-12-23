@@ -52,7 +52,7 @@ export default {
               localStorage.setItem("token", response.data.tokenReturn);
               localStorage.setItem("auth", response.data.auth);
               localStorage.setItem("user", JSON.stringify(response.data.user));
-              
+              console.log("response",response.data);
               this.$router.push("/");
           }).catch( (error) => {
               console.log("error", error);

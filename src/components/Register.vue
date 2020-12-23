@@ -38,38 +38,61 @@
 </template>
 
 <script>
-import User from '../api/User.js';
+import User from "../api/User.js";
 
 export default {
   name: "Register",
-  data () {
-    return{
-        rol: "Cliente",
-        nombre: "",
-        email: "",
-        password: "",
-        estado: 1
-    }
+  data() {
+    return {
+      rol: "Cliente",
+      nombre: "",
+      email: "",
+      password: "",
+      estado: 1,
+    };
   },
-  methods:{
-      register: function () {
-          const form = {
-              rol: this.rol,
-              nombre: this.nombre,
-              email: this.email,
-              password: this.password,
-              estado: this.estado
+  created() {
+    this.initialData();
+  },
+  updated() {
+    this.initialData();
+  },
+  methods: {
+    register: function () {
+      const form = {
+        rol: this.rol,
+        nombre: this.nombre,
+        email: this.email,
+        password: this.password,
+        estado: this.estado,
+      };
+      console.log("register");
+
+      User.register(form)
+        .then((response) => {
+          console.log("response", response.data);
+          if (this.rol == "Empleado") {
+            this.$router.push("/usuarios");
+          } else {
+            this.$router.push("/login");
           }
-          console.log("register");
-          
-          User.register(form).then( (response) => {
-              console.log("response", response.data);
-              this.$router.push("/login");
-          }).catch( (error) => {
-              console.log("error", error);
-          });
-          
+        })
+        .catch((error) => {
+          console.log("error", error);
+        });
+    },
+    initialData() {
+      let user = localStorage.getItem("user");
+
+      if (user) {
+        user = JSON.parse(user);
+        if (user.rol == "Administrador") {
+          this.rol = "Empleado";
+        } else {
+          this.rol = "Cliente";
+        }
       }
-  }
+    },
+  },
 };
 </script>
