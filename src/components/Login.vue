@@ -1,7 +1,7 @@
 <template>
   <div>
     <form @submit.prevent="login">
-      <p class="h4 text-center mb-4">Inicio sesión</p>
+      <p class="h4 text-center mb-4" style="margin-top:5%">Hola! &#128515 Inicia sesión &#128540</p>
       <label for="defaultFormRegisterEmailEx" class="grey-text"
         >Email</label
       >
@@ -24,7 +24,7 @@
         required
       />
       <div class="text-center mt-4">
-        <button class="btn btn-primary" type="submit">Login</button>
+        <button class="btn btn-primary" type="submit">Ingresar</button>
       </div>
     </form>
   </div>

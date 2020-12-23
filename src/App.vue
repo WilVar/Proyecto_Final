@@ -7,48 +7,48 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link tag="li" to="/" exact>
-            <a class="nav-link">Inicio</a>
+            <a class="nav-link">Inicio &#127968</a>
           </router-link>
         </li>
         <li class="nav-item">
           <router-link tag="li" to="/servicios">
-            <a class="nav-link">Servicios</a>
+            <a class="nav-link">Servicios &#128295</a>
           </router-link>
         </li>
          <li class="nav-item">
           <router-link tag="li" to="/productos">
-            <a class="nav-link">Productos</a>
+            <a class="nav-link">Productos &#128209</a>
           </router-link>
         </li>
         <li class="nav-item">
           <router-link tag="li" to="/noticias">
-            <a class="nav-link">Noticias</a>
+            <a class="nav-link">Noticias &#128197</a>
           </router-link>
         </li>
         <div v-if="this.isAdmin">
           <li class="nav-item">
             <router-link tag="li" to="/usuarios">
-              <a class="nav-link">Usuarios</a>
+              <a class="nav-link">Usuarios &#128101</a>
             </router-link>
           </li>
         </div>
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/login">
-              <a class="nav-link">Login</a>
+              <a class="nav-link">Iniciar Sesión &#128273</a>
             </router-link>
           </li>
         </div>
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/register">
-              <a class="nav-link">Register</a>
+              <a class="nav-link">Registrarse &#9997</a>
             </router-link>
           </li>
         </div>
         <div v-else>
           <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="logOut">LogOut</a>
+            <a class="nav-link" href="#" v-on:click="logOut">Salir &#10060</a>
           </li>
         </div>
       </ul>
