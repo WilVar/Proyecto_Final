@@ -11,8 +11,8 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link tag="li" to="/servicios">
-            <a class="nav-link">Servicios</a>
+          <router-link tag="li" to="/categorias">
+            <a class="nav-link">Categorias</a>
           </router-link>
         </li>
          <li class="nav-item">

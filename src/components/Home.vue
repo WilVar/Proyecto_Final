@@ -2,28 +2,28 @@
   <div>
     <Slide2 />
 
-    <Servicios/>
+    <Categorias />
     
-    <Equipo/>
+    <Productos />
 
-    <Noticias/>
+    <Noticias />
 
   </div>
 </template>
 
 <script>
 import Slideshow from './Slideshow.vue';
-import Servicios from "./Servicios.vue";
+import Categorias from "./Categorias.vue";
 import Noticias from "./Noticias.vue";
-import Equipo from "./Equipo.vue";
+import Productos from "./Productos.vue";
 import Slide2 from "./Slide2.vue";
 export default {
   name: 'Home',
   components:{
     Slideshow: Slideshow,
-    Servicios: Servicios,
+    Categorias: Categorias,
     Noticias: Noticias,
-    Equipo: Equipo,
+    Productos: Productos,
     Slide2: Slide2
   },
   data () {

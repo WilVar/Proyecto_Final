@@ -26,9 +26,9 @@ export default {
       }
   },
   created(){
-    this.name = this.service.name;
-    this.description = this.service.description;
-    this.image = this.service.image;
+    this.name = this.service.nombre;
+    this.description = this.service.descripcion;
+    this.image = this.service.url;
   }
 
 };

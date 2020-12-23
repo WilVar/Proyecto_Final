@@ -1,9 +1,19 @@
 <template>
   <div>
-    <div class="container-fluid1" style="text-align: center;background-color: #F7F6F3">
-      <div class="col" style="text-align: center;">
-        <h1 style="font-size: 50px; text-align: center; font-family: verdana;margin-top:10%">
-          <b>Noticias Tecnológicas</b>
+    <div
+      class="container-fluid1"
+      style="text-align: center; background-color: #f7f6f3"
+    >
+      <div class="col" style="text-align: center">
+        <h1
+          style="
+            font-size: 50px;
+            text-align: center;
+            font-family: verdana;
+            margin-top: 10%;
+          "
+        >
+          <b>Noticias de Salud</b>
         </h1>
       </div>
 
@@ -16,6 +26,7 @@
         <NewsCard :News="this.news[2]" />
         <NewsCard :News="this.news[3]" />
       </div>
+
     </div>
   </div>
 </template>
@@ -36,14 +47,18 @@ export default {
     };
   },
   created() {
-    var url =
-      "http://newsapi.org/v2/top-headlines?country=co&category=general&" +
-      "apiKey=5906a69cc8a74e448d4ff1df3e1da6ca";
-    axios.get(url).then((res) => {
-      this.news = res.data.articles;
-      console.log("this.news", this.news[0]);
-    });
-    console.log("beforeCreate", this.news);
+    this.loadData();
+  },
+  methods: {
+    loadData() {
+      var url =
+        "http://newsapi.org/v2/top-headlines?country=co&category=health&" +
+        "apiKey=5906a69cc8a74e448d4ff1df3e1da6ca";
+
+      axios.get(url).then((res) => {
+        this.news = res.data.articles;
+      });
+    },
   },
 };
 </script>
