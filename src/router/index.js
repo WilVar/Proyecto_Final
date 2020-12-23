@@ -29,8 +29,8 @@ export default new Router({
       component: Noticias
     },
     {
-      path: '/equipo',
-      name: 'Team',
+      path: '/productos',
+      name: 'Products',
       component: Equipo
     },
     {

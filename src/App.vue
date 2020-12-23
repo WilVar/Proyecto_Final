@@ -15,14 +15,14 @@
             <a class="nav-link">Servicios</a>
           </router-link>
         </li>
-        <li class="nav-item">
-          <router-link tag="li" to="/noticias">
-            <a class="nav-link">Noticias</a>
+         <li class="nav-item">
+          <router-link tag="li" to="/productos">
+            <a class="nav-link">Productos</a>
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link tag="li" to="/equipo">
-            <a class="nav-link">Equipo</a>
+          <router-link tag="li" to="/noticias">
+            <a class="nav-link">Noticias</a>
           </router-link>
         </li>
         <div v-if="this.isAdmin">

@@ -6,7 +6,7 @@
           <b>Aprovecha toda nuestra experiencia</b>
         </h1>
         <h1 style="font-size: 50px; text-align: center; font-family: verdana">
-          <b>en programación </b>
+          <b>en limpieza y mantenimiento </b>
         </h1>
         <p
           style="
@@ -16,7 +16,7 @@
             color: #4177fb;
           "
         >
-          conoce nuestros cursos
+          conoce nuestros servicios
         </p>
       </div>
     </div>
@@ -25,15 +25,17 @@
       <ServiceCard :service="service1" />
       <ServiceCard :service="service2" />
       <ServiceCard :service="service3" />
+      <ServiceCard :service="service4" />
     </div>
   </div>
 </template>
 
 <script>
 import ServiceCard from "./ServiceCard.vue";
-import Python from "../assets/pyton.png";
-import Java from "../assets/java.png";
-import MySQL from "../assets/sql.png";
+import IMS1 from "../assets/maqp.png";
+import IMS2 from "../assets/AseoGeneral.png";
+import IMS3 from "../assets/Mezcladora.png";
+import IMS4 from "../assets/aseo.png";
 import "../assets/css/servicios.css";
 
 export default {
@@ -45,26 +47,33 @@ export default {
   data() {
     return {
       service1: {
-        name: "Curso Python",
+        name: "Maquinaria Pesada",
         description:
-          " Python es un lenguaje de programación multiparadigma, lo cual significa que soporta Orientación a Objetos, Programación Imperativa y Programación Funcional.",
-        image: Python,
+          "Contamos con instrumentos especializados para el mantenimiento de máquinas a nivel industrial.",
+        image: IMS1,
         myUrl: "https://codigofacilito.com/cursos/Python",
       },
       service2: {
-        name: "Curso Java",
+        name: "Aseo General",
         description:
-          "Java es uno de los lenguajes de programación más populares desde el 2012. Java está  presente tanto en computadores, consolas de videojuegos, dispositivos móviles y hasta en la internet.",
-        image: Java,
+          "Le brindamos un servicio sencillo en donde se realizara la debida limpieza en su lugar de trabajo para un ambiente más fresco y cómodo.",
+        image: IMS2,
         myUrl: "https://codigofacilito.com/cursos/JAVA",
       },
       service3: {
-        name: "Curso MySQL",
+        name: "Instrumentos Obra",
         description:
-          "MySQL es un sistema de gestión de bases de datos relacional, es considerada como la base de datos de código abierto más popular del mundo. Cuenta con licencia pública, y licencia comercial.",
-        image: MySQL,
+          "Limpieza de máquinas, herramientas y equipos para el trabajo de construcción.",
+        image: IMS3,
         myUrl: "https://edutin.com/curso-de-mysql-4303",
       },
+       service4: {
+        name: "Rapiclean Max",
+        description:
+          "Se ofrece un paquete con todos nuestros otros tres servicios disponibles: Maquinaria Pesada, Instrumentos Obra, Aseo General.",
+        image: IMS4,
+        myUrl: "https://edutin.com/curso-de-mysql-4303",
+      }
     };
   },
 };

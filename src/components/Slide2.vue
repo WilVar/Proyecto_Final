@@ -6,6 +6,7 @@
 import IM1 from '../assets/imp1.jpg';
 import IM2 from '../assets/img2.png';
 import IM3 from '../assets/img3.jpg';
+import IM4 from '../assets/mantenimiento.jpg';
   export default {
     data() {
       return {
@@ -13,6 +14,7 @@ import IM3 from '../assets/img3.jpg';
           '<div class="example-slide"><img src="'+IM2+'" width="70%" height="70%"/></div>',
           '<div class="example-slide">Tenemos personal altamente calificado<img src="'+IM1+'" width="70%" height="70%"/></div>',
           '<div class="example-slide"><img src="'+IM3+'" width="70%" height="70%"/>Te damos garantía y soporte</div>',
+          '<div class="example-slide"><img src="'+IM4+'" width="70%" height="70%"/>Te ofrecemos mantenimientos programados</div>',
         ],
       };
     },

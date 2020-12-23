@@ -3,10 +3,10 @@
     <Slide2 />
 
     <Servicios/>
+    
+    <Equipo/>
 
     <Noticias/>
-
-    <Equipo/>
 
   </div>
 </template>
