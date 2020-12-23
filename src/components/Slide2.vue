@@ -3,14 +3,16 @@
 </template>
 
 <script>
-import Java from '../assets/java.png';
+import IM1 from '../assets/imp1.jpg';
+import IM2 from '../assets/img2.png';
+import IM3 from '../assets/img3.jpg';
   export default {
     data() {
       return {
         data: [
-          '<div class="example-slide"><img src="'+Java+'" width="100" height="100"/></div>',
-          '<div class="example-slide">Slide 2</div>',
-          '<div class="example-slide">Slide 3</div>',
+          '<div class="example-slide"><img src="'+IM2+'" width="70%" height="70%"/></div>',
+          '<div class="example-slide">Tenemos personal altamente calificado<img src="'+IM1+'" width="70%" height="70%"/></div>',
+          '<div class="example-slide"><img src="'+IM3+'" width="70%" height="70%"/>Te damos garantía y soporte</div>',
         ],
       };
     },
@@ -20,10 +22,12 @@ import Java from '../assets/java.png';
 <style>
   .example-slide {
     align-items: center;
-    background-color: #666;
-    color: #999;
+    background-color:  #F7F6F3;
+    color:#133664;
     display: flex;
-    font-size: 1.5rem;
+    font:oblique;
+    font-size:3rem;
+    text-align: center;
     justify-content: center;
     min-height: 10rem;
   }

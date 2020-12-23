@@ -1,7 +1,8 @@
 <template>
-  <div class="container-fluid bg-white">
+  <div class="container-fluid  " style="background-color: #F7F6F3">
     <nav
-      class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end"
+      class="navbar navbar-expand-sm navbar-dark  justify-content-end"
+      style="background-color: #133664"
     >
       <ul class="navbar-nav">
         <li class="nav-item">

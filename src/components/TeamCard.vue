@@ -1,6 +1,6 @@
 <template>
      <div>
-        <div class="card text-white bg-dark">
+        <div class="card text-white" style="background-color: #133664">
             <div class="d-flex justify-content-center p-2">
                 <img :src="member.image" alt="fotoequipo" height="200" width="200">
                 </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container-fluid1" style="text-align: center;">
+    <div class="container-fluid1" style="text-align: center;background-color: #F7F6F3">
       <div class="col" style="text-align: center;">
         <h1 style="font-size: 50px; text-align: center; font-family: verdana;margin-top:10%">
           <b>Noticias Tecnológicas</b>
