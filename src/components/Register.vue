@@ -1,7 +1,7 @@
 <template>
   <div>
     <form @submit.prevent="register">
-      <p class="h4 text-center mb-4">Registrar Usuario</p>
+      <p class="h4 text-center mb-4" style="margin-top:5%">&#128516  Sé parte de nuestra familia  &#128516</p>
       <label for="defaultFormRegisterNameEx" class="grey-text">Nombre</label>
       <input
         type="text"
@@ -31,7 +31,7 @@
         required
       />
       <div class="text-center mt-4">
-        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-primary" type="submit">Registrar</button>
       </div>
     </form>
   </div>

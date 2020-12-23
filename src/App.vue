@@ -7,12 +7,13 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link tag="li" to="/" exact>
-            <a class="nav-link">Inicio</a>
+            <a class="nav-link">Inicio </a>
           </router-link>
         </li>
         <li class="nav-item">
           <router-link tag="li" to="/categorias">
             <a class="nav-link">Categorias</a>
+
           </router-link>
         </li>
          <li class="nav-item">
@@ -35,20 +36,20 @@
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/login">
-              <a class="nav-link">Login</a>
+              <a class="nav-link">Iniciar Sesión </a>
             </router-link>
           </li>
         </div>
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/register">
-              <a class="nav-link">Register</a>
+              <a class="nav-link">Registrarse </a>
             </router-link>
           </li>
         </div>
         <div v-else>
           <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="logOut">LogOut</a>
+            <a class="nav-link" href="#" v-on:click="logOut">Salir </a>
           </li>
         </div>
       </ul>
