@@ -86,7 +86,7 @@
     <!-- Footer Text -->
 
     <!-- Copyright -->
-    <div class="footer-copyright2 text-center py-3 bg-dark">
+    <div class="footer-copyright2 text-center py-3 " style="background-color: #133664">
       Enlace a nuestro Repositorio:
       <a href="https://github.com/Orjuela91/proyecto_final_ciclo3-51"
         >ir a GitHub</a

@@ -4,7 +4,7 @@
       <p>{{ this.description }}</p>
       <a :href="this.url" target="blank"><img class="imagenNew" :src="this.imagen" alt="imagennew"></a>
 
-      <a :href="this.url" target="blank"><button type="button" class="btn btn-info"><span>Ver fuente </span></button></a>
+      <a :href="this.url" target="blank"><button type="button" class="btn btn" style="background-color:#16C1DE"><span>Ver fuente </span></button></a>
       
     </div>
   
