@@ -1,35 +1,47 @@
 <template>
-  <vue-bootstrap4-table :rows="rows" :columns="columns" :config="config" :actions="actions" @on-create="create">
-      <template slot="id" slot-scope="props">
-        <button class="btn btn-warning color_text" @click="edit(props.cell_value)">
-            Editar
-        </button>
-        <button class="btn btn-danger color_text" @click="inactivate(props.cell_value)">
-            Eliminar
-        </button>
+  <vue-bootstrap4-table
+    :rows="rows"
+    :columns="columns"
+    :config="config"
+    :actions="actions"
+    @on-create="create"
+  >
+    <template slot="id" slot-scope="props">
+      <button
+        class="btn btn-warning color_text"
+        @click="edit(props.cell_value)"
+      >
+        Editar
+      </button>
+      <button
+        class="btn btn-danger color_text"
+        @click="inactivate(props.cell_value)"
+      >
+        Eliminar
+      </button>
     </template>
   </vue-bootstrap4-table>
 </template>
     
 <script>
 import VueBootstrap4Table from "vue-bootstrap4-table";
-import Articulo from '../api/Articulo.js';
+import Articulo from "../api/Articulo.js";
 
 export default {
   name: "Articulos",
   components: { VueBootstrap4Table },
   methods: {
-            create(payload) {
-                console.log(payload);
-                this.$router.push("/registrar");
-            },
-            edit(id_articulo){
-                alert("editar "+id_articulo);
-            },
-            inactivate(id_articulo){
-                alert("inactivar "+id_articulo);
-            },
-        },
+    create(payload) {
+    
+      this.$router.push("/registrar");
+    },
+    edit(id_articulo) {
+      alert("editar " + id_articulo);
+    },
+    inactivate(id_articulo) {
+      alert("inactivar " + id_articulo);
+    },
+  },
   data() {
     return {
       rows: [],
@@ -46,11 +58,15 @@ export default {
         {
           label: "Descripcion",
           name: "descripcion",
-           },
+        },
+        {
+          label: "Categoria",
+          name: "categoria",
+        },
         {
           label: "Url",
           name: "url",
-            },
+        },
         {
           label: "Acciones",
           name: "id",
@@ -73,35 +89,36 @@ export default {
       },
     };
   },
-  created(){
-      var prod = [];
-      
-      Articulo.list().then((response) => {
-          console.log("response",response.data);
-          const dataApi = response.data;
-          dataApi.map( (articulo) => {
+  created() {
+    var prod = [];
 
-              let prodAux = {
-                  id: articulo.id,
-                  name: articulo.nombre,
-                  descripcion: articulo.descripcion,
-                  url: articulo.url
-                
-              }
+    Articulo.list()
+      .then((response) => {
+        
+        const dataApi = response.data;
+        dataApi.map((articulo) => {
+          let prodAux = {
+            id: articulo.id,
+            name: articulo.nombre,
+            descripcion: articulo.descripcion,
+            categoria: articulo.nombreCategoria,
+            url: articulo.url,
+          };
 
-              prod.push(prodAux);
-          });
+          prod.push(prodAux);
+        });
 
-          this.rows = prod;
-      }).catch((error)=>{
-          console.log("error",error);
+        this.rows = prod;
+      })
+      .catch((error) => {
+        console.log("error", error);
       });
-  }
+  },
 };
 </script>
 
 <style >
-.color_text{
-    color: aliceblue;
+.color_text {
+  color: aliceblue;
 }
 </style>

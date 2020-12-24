@@ -11,9 +11,8 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link tag="li" to="/admincategorias">
-            <a class="nav-link">Administrador Categorias</a>
-
+          <router-link tag="li" to="/categorias">
+            <a class="nav-link">categorias</a>
           </router-link>
         </li>
         <li class="nav-item">
@@ -33,23 +32,20 @@
             </router-link>
           </li>
         </div>
-
-
+        <div v-if="this.isAdmin">
           <li class="nav-item">
-            <router-link tag="li" to="/categorias">
-              <a class="nav-link">categorias</a>
+            <router-link tag="li" to="/admincategorias">
+              <a class="nav-link">Administrador Categorias</a>
             </router-link>
           </li>
-   
-
-
+        </div>
+        <div v-if="this.isAdmin">
           <li class="nav-item">
             <router-link tag="li" to="/articulos">
-              <a class="nav-link">articulos</a>
+              <a class="nav-link">Administrador productos</a>
             </router-link>
           </li>
-
-
+        </div>
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/login">
@@ -109,7 +105,7 @@ export default {
       this.user = localStorage.getItem("user");
       if (this.user) {
         this.user = JSON.parse(this.user);
-        console.log("this.user", this.user.rol);
+        
         if (this.user.rol == "Administrador") {
           this.isAdmin = true;
         } else {

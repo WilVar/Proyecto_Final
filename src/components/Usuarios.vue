@@ -20,7 +20,6 @@ export default {
   components: { VueBootstrap4Table },
   methods: {
             create(payload) {
-                console.log(payload);
                 this.$router.push("/register");
             },
             edit(id_usuario){
@@ -87,7 +86,7 @@ export default {
       var users = [];
       
       User.list().then((response) => {
-          console.log("response",response.data);
+         
           const dataApi = response.data;
           dataApi.map( (user) => {
 

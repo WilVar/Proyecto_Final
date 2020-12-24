@@ -26,7 +26,6 @@
       <ServiceCard :service="articles[1]" />
       <ServiceCard :service="articles[2]" />
       <ServiceCard :service="articles[3]" />
-      <ServiceCard :service="articles[4]" />
     </div>
   </div>
 </template>

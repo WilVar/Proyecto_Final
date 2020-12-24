@@ -20,7 +20,6 @@ export default {
   components: { VueBootstrap4Table },
   methods: {
             create(payload) {
-                console.log(payload);
                 this.$router.push("/formulario");
             },
             edit(id_categoria){
@@ -78,7 +77,6 @@ export default {
       var cat = [];
       
       Categories.list().then((response) => {
-          console.log("response",response.data);
           const dataApi = response.data;
           dataApi.map( (categoria) => {
 
