@@ -24,14 +24,9 @@ export default {
     Slideshow: Slideshow,
     Categorias: Categorias,
     Noticias: Noticias,
-<<<<<<< HEAD
-    Equipo: Equipo,
-    Slide2: Slide2,
-
-=======
     Productos: Productos,
     Slide2: Slide2
->>>>>>> e6a4b7dec96475be98a8bf183cda126a3a11884c
+
   },
   data () {
     return {
