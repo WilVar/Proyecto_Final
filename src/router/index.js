@@ -56,11 +56,7 @@ export default new Router({
       name: 'Users',
       component: Usuarios
     },
-    {
-      path: '/categorias',
-      name: 'Categorias',
-      component: Categorias
-    },
+  
     {
       path: '/articulos',
       name: 'Articulos',
