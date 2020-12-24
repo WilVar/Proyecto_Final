@@ -13,7 +13,7 @@
     
 <script>
 import VueBootstrap4Table from "vue-bootstrap4-table";
-import Categoria from '../api/Categoria.js';
+import Categories from '../api/Categories.js';
 
 export default {
   name: "Categorias",
@@ -77,7 +77,7 @@ export default {
   created(){
       var cat = [];
       
-      Categoria.list().then((response) => {
+      Categories.list().then((response) => {
           console.log("response",response.data);
           const dataApi = response.data;
           dataApi.map( (categoria) => {

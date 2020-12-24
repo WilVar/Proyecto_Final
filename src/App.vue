@@ -11,8 +11,8 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link tag="li" to="/categorias">
-            <a class="nav-link">Categorias</a>
+          <router-link tag="li" to="/admincategorias">
+            <a class="nav-link">Administrador Categorias</a>
 
           </router-link>
         </li>

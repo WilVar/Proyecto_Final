@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import Categoria from "../api/Categoria.js";
+import Categories from "../api/Categories.js";
 
 export default {
   name: "Formulario",
@@ -61,10 +61,10 @@ export default {
       };
       console.log("register");
 
-      Categoria.add(form)
+      Categories.add(form)
         .then((response) => {
           console.log("response", response.data);
-          this.$router.push('/categorias')
+          this.$router.push('/admincategorias')
 
         })
         .catch((error) => {

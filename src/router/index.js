@@ -9,6 +9,8 @@ import Register from '../components/Register.vue';
 import Usuarios from '../components/Usuarios.vue';
 import Articulos from '../components/Articulos.vue';
 import Formulario from '../components/Formulario.vue';
+import TablaCategoria from '../components/TablaCategoria.vue';
+
 
 Vue.use(Router)
 
@@ -54,6 +56,11 @@ export default new Router({
       path: '/usuarios',
       name: 'Users',
       component: Usuarios
+    },
+    {
+      path: '/admincategorias',
+      name: 'AdminCategorias',
+      component: TablaCategoria
     },
   
     {
