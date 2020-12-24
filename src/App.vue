@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid  " style="background-color: #F7F6F3">
+  <div class="container-fluid" style="background-color: #f7f6f3">
     <nav
-      class="navbar navbar-expand-sm navbar-dark  justify-content-end"
+      class="navbar navbar-expand-sm navbar-dark justify-content-end"
       style="background-color: #133664"
     >
       <ul class="navbar-nav">
@@ -15,7 +15,7 @@
             <a class="nav-link">Servicios</a>
           </router-link>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <router-link tag="li" to="/productos">
             <a class="nav-link">Productos</a>
           </router-link>
@@ -32,6 +32,23 @@
             </router-link>
           </li>
         </div>
+
+
+          <li class="nav-item">
+            <router-link tag="li" to="/categorias">
+              <a class="nav-link">categorias</a>
+            </router-link>
+          </li>
+   
+
+
+          <li class="nav-item">
+            <router-link tag="li" to="/articulos">
+              <a class="nav-link">articulos</a>
+            </router-link>
+          </li>
+
+
         <div v-if="this.auth == null">
           <li class="nav-item">
             <router-link tag="li" to="/login">
@@ -69,7 +86,7 @@ export default {
     return {
       auth: null,
       user: null,
-      isAdmin: false
+      isAdmin: false,
     };
   },
   created() {
@@ -83,7 +100,7 @@ export default {
       localStorage.removeItem("auth");
       localStorage.removeItem("user");
       localStorage.removeItem("token");
-       this.$router.push("/");
+      this.$router.push("/");
       this.$forceUpdate();
     },
     loadProps() {
@@ -91,14 +108,14 @@ export default {
       this.user = localStorage.getItem("user");
       if (this.user) {
         this.user = JSON.parse(this.user);
-        console.log("this.user",this.user.rol)
-        if(this.user.rol == "Administrador"){
+        console.log("this.user", this.user.rol);
+        if (this.user.rol == "Administrador") {
           this.isAdmin = true;
-        }else{
+        } else {
           this.isAdmin = false;
         }
-      }else{
-        this.isAdmin = false
+      } else {
+        this.isAdmin = false;
       }
     },
   },

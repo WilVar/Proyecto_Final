@@ -7,6 +7,9 @@ import Equipo from '../components/Equipo.vue';
 import Login from '../components/Login.vue';
 import Register from '../components/Register.vue';
 import Usuarios from '../components/Usuarios.vue';
+import Categorias from '../components/Categorias.vue';
+import Articulos from '../components/Articulos.vue';
+import Formulario from '../components/Formulario.vue';
 
 Vue.use(Router)
 
@@ -44,9 +47,25 @@ export default new Router({
       component: Register
     },
     {
+      path: '/formulario',
+      name: 'Formulario',
+      component: Formulario
+    },
+    {
       path: '/usuarios',
       name: 'Users',
       component: Usuarios
-    }
+    },
+    {
+      path: '/categorias',
+      name: 'Categorias',
+      component: Categorias
+    },
+    {
+      path: '/articulos',
+      name: 'Articulos',
+      component: Articulos
+    },
+    
   ]
 })
