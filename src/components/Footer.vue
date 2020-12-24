@@ -19,7 +19,7 @@
                 <h4
                   class="titulo title-pill title-pill-secondary2 arrow text-uppercase aid-150236 cid-645"
                 >
-                  <a>CONTACTANOS</a>
+                  <a>CONTÁCTANOS</a>
                 </h4>
                 <div class="row">
                   <div class="col-sm-1" style="margin-top:1%;">

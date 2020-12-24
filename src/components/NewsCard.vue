@@ -1,5 +1,5 @@
 <template>
-    <div class="col col-lg-5 newsColum" style="text-align: center; padding: 2%; width:46%">
+    <div class="col col-lg-5 newsColum" style="text-align: center; padding: 1%; width:45%">
       <h4 class= "newstittle">{{ this.title }}</h4>
       <p>{{ this.description }}</p>
       <a :href="this.url" target="blank"><img class="imagenNew" :src="this.imagen" alt="imagennew"></a>
