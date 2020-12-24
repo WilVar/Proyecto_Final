@@ -7,7 +7,6 @@ import Productos from '../components/Productos.vue';
 import Login from '../components/Login.vue';
 import Register from '../components/Register.vue';
 import Usuarios from '../components/Usuarios.vue';
-import Categorias from '../components/Categorias.vue';
 import Articulos from '../components/Articulos.vue';
 import Formulario from '../components/Formulario.vue';
 
